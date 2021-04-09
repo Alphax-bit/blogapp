@@ -22,4 +22,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
+    path('accounts/', include('accounts.urls')),  # order of urls matter, django looks from top to bottom.
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
